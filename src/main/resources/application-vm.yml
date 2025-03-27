@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:vmdb
+    driver-class-name: org.h2.Driver
+    username: vm
+    password: vm123
+  application:
+    name: vmRocket

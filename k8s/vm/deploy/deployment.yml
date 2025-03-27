@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vm-cls515-labmaven-eq5
+  namespace: eq5
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: vm-cls515-labmaven-eq5
+  template:
+    metadata:
+      labels:
+        app: vm-cls515-labmaven-eq5
+    spec:
+      containers:
+        - name: cls515-labmaven-eq5
+          image: 10.10.0.30:8082/edu.mv/cls515-labmaven-eq5:1.1.0
+          ports:
+            - containerPort: 8082
+      imagePullSecrets:
+        - name: regcred
+      restartPolicy: Always

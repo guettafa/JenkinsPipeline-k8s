@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: vm-cls515-labmaven-eq5-service
+  namespace: eq5
+spec:
+  selector:
+    app: vm-cls515-labmaven-eq5
+  ports:
+    - port: 9091
+      targetPort: 9091
+  type: LoadBalancer

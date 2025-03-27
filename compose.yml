@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+  jenkins:
+    image: jenkins/jenkins
+    ports:
+      - 8080:8080
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    networks:
+      - app_deployment_network
+  nexus:
+    image: sonatype/nexus3
+    ports:
+      - 8081:8081
+      - 8083:8083
+    volumes:
+      - nexus-data:/nexus-data
+volumes:
+  jenkins_home:
+  nexus-data: {}
+networks:
+  app_deployment_network:
+    name: app_deployment_network

@@ -1,0 +1,13 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true # Pour tester sur une autre machine
+  sql:
+    init:
+      mode: always
+server:
+  port: 9091
