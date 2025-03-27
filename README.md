@@ -1,19 +1,19 @@
-# cls515-labmaven
+# Jenkins Pipeline for CI/CD using K8S for deployment
 
-## Pour builder:
+## To build
     mvn clean install
 
-## Pour partir Spring Boot:
+## To start Spring Boot project
     mvn spring-boot:run
 
-# Opération pour le rocket api
+# Operation on the Rocket API
 
 1. GET /rocket/{rocketid}
 
 2. POST /rocket
     voir /test/resources/rocket.json
    
-# Coverage / Couverture des tests
+# Coverage
 
 ## Coverage in Intellij
 ![jacoco-intellij](assets/jacoco-intellij-coverage.png)
